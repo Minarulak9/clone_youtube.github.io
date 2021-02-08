@@ -11,12 +11,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #0e0e0e;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0e0e0e;
+  background: #494949;
 }
 
 /* Handle on hover */
@@ -32,8 +32,8 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15% 1fr;
-      grid-template-columns: 15% 1fr;
+  -ms-grid-columns: 240px 1fr;
+      grid-template-columns: 240px 1fr;
   -ms-grid-rows: 67px 9fr;
       grid-template-rows: 67px 9fr;
   z-index: -2;
@@ -140,6 +140,10 @@
   color: #bbbbbb;
 }
 
+#youtube #nav .icons .fa-search {
+  display: none;
+}
+
 #youtube #nav .icons .fa-bell {
   position: relative;
 }
@@ -164,6 +168,16 @@
 #youtube #nav .icons i:last-child {
   font-size: 1.5rem;
   color: #bbbbbb;
+}
+
+#youtube #bottom_menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #222222;
+  z-index: 10;
+  display: none;
 }
 
 #youtube #menu {
@@ -229,7 +243,7 @@
   position: absolute;
   top: 50%;
   right: 0px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
 }
@@ -253,7 +267,7 @@
 }
 
 #youtube #menu .copy {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #f3f3f3;
   line-height: 2rem;
   padding: 15px;
@@ -386,5 +400,61 @@
   color: #a0a0a0;
   font-size: 0.8rem;
   text-transform: capitalize;
+}
+
+@media only screen and (max-width: 700px) {
+  #youtube #nav .search_con {
+    display: none;
+  }
+  #youtube #nav .icons i {
+    margin: 0 5px;
+  }
+  #youtube #nav .icons .fa-search {
+    display: inline-block;
+  }
+  #youtube #menu {
+    display: none;
+  }
+  #youtube #content {
+    grid-area: 2/1/-1/-1;
+  }
+  #youtube #bottom_menu {
+    display: block;
+  }
+  #youtube #bottom_menu ul {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 15px;
+  }
+  #youtube #bottom_menu ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: .8rem;
+    padding: 8px;
+  }
+  #youtube #bottom_menu ul li:hover {
+    background-color: #494949;
+  }
+  #youtube #bottom_menu ul li i {
+    color: #bbbbbb;
+    padding: 7px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
