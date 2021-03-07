@@ -391,7 +391,7 @@
 #youtube #content .box a .profile_title img {
   width: 40px;
   height: 40px;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #8a8a8a;
 }
 
@@ -446,7 +446,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 8px;
   }
   #youtube #bottom_menu ul li:hover {
